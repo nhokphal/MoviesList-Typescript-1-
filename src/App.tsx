@@ -1,24 +1,50 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { MovieDTO } from './Movies/Movie.model';
+import MoviesList from './Movies/MovieList';
 
 function App() {
+
+const inTheater: MovieDTO[]= [{
+  id: 2,
+  title: "home",
+  poster: "https://upload.wikimedia.org/wikipedia/en/8/85/Home_%282015_film%29_poster.jpg",
+},
+{
+  id: 2,
+  title: "home",
+  poster: "https://upload.wikimedia.org/wikipedia/en/8/85/Home_%282015_film%29_poster.jpg",
+},
+{
+  id: 2,
+  title: "home",
+  poster: "https://upload.wikimedia.org/wikipedia/en/8/85/Home_%282015_film%29_poster.jpg",
+},
+]
+const upComming: MovieDTO[] = [
+  {
+    id: 2,
+    title: "home",
+    poster: "https://upload.wikimedia.org/wikipedia/en/8/85/Home_%282015_film%29_poster.jpg",
+  },
+  {
+    id: 2,
+    title: "home",
+    poster: "https://upload.wikimedia.org/wikipedia/en/8/85/Home_%282015_film%29_poster.jpg",
+  },
+  {
+    id: 2,
+    title: "home",
+    poster: "https://upload.wikimedia.org/wikipedia/en/8/85/Home_%282015_film%29_poster.jpg",
+  },
+]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>In Theather</h3>
+     <MoviesList movies={inTheater} />
+     <h3>Up Comming</h3>
+      <MoviesList movies={upComming} />
     </div>
   );
 }
